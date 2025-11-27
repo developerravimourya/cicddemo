@@ -1,0 +1,5 @@
+{
+  "name": "PMRDA RTS Services Portal",
+  "description": "A responsive government service portal for the Pune Metropolitan Region Development Authority allowing citizens to apply for services and officials to process them.",
+  "requestFramePermissions": []
+}
