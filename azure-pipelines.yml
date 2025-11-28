@@ -1,0 +1,19 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - checkout: self
+    clean: true
+
+  - task: SSH@0
+    displayName: Deploy FRONTEND
+    inputs:
+      sshEndpoint: 'GoDaddy-Frontend-SSH'
+      runOptions: 'commands'
+      commands: |
+        bash /home/aiwms/public_html/ai-tools-backend/cicdtest/deploy.sh
