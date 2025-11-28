@@ -45,7 +45,7 @@ const App: React.FC = () => {
     ));
   };
 
-  // --- Render New Pipeline Created.
+  // --- Render New Pipeline Created. with new updates
   return (
     <Router>
       <Layout 
