@@ -45,7 +45,7 @@ const App: React.FC = () => {
     ));
   };
 
-  // --- Render --- My File
+  // --- Render New Pipeline Created.
   return (
     <Router>
       <Layout 
