@@ -4,14 +4,16 @@ trigger:
       - main
 
 pool:
-  name: MyLinuxPool
+  vmImage: ubuntu-latest
 
 steps:
   - checkout: self
     clean: true
 
-  - script: |
-        echo "Deployment Started..."
-        chmod +x /home/aiwms/public_html/ai-tools-backend/cicdtest/deploy.sh
+  - task: SSH@0
+    displayName: Deploy FRONTEND
+    inputs:
+      sshEndpoint: 'GoDaddy-Frontend-SSH'
+      runOptions: 'commands'
+      commands: |
         bash /home/aiwms/public_html/ai-tools-backend/cicdtest/deploy.sh
-    displayName: "Deploy FRONTEND"

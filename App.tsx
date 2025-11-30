@@ -9,7 +9,7 @@ import { Role, User, Language, Application, AppStatus } from './types';
 import { MOCK_APPLICATIONS } from './constants';
 
 const App: React.FC = () => {
-  // --- Global State Management (Mocking Backend) --- testing
+  // --- Global State Management (Mocking Backend) --- testing new 
   const [user, setUser] = useState<User | null>(null);
   const [language, setLanguage] = useState<Language>('en');
   const [applications, setApplications] = useState<Application[]>(MOCK_APPLICATIONS);
